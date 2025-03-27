@@ -1,6 +1,19 @@
-<div class="container bg-body text-center">
-    <div class="folder" *ngFor="let dado of dados">
-        <h1>{{dado.title}}</h1>
-        <p>{{dado.body}}</p>
-    </div>
-</div>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">TITLE</th>
+        <th scope="col">POST</th>
+      </tr>
+    </thead>
+</table>
+
+<table class="table">
+    <thead>
+      <tr *ngFor="let dado of dados">
+        <th scope="col">{{dado.id}}</th>
+        <th scope="col">{{dado.title}}</th>
+        <th scope="col">{{dado.body}}</th>
+      </tr>
+    </thead>
+</table>

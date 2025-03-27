@@ -8,14 +8,15 @@ import { DadoService } from '../dado.service';
   styleUrl: './dados.component.css'
 })
 export class DadosComponent implements OnInit {
-
   dados: any[] = [];
 
   constructor(private dadoService: DadoService){}
 
   ngOnInit(): void {
-      this.dadoService.getDados().subscribe(
-        json => this.dados = json.data.dados
+      this.dadoService.getDados().subscribe({
+        next: (dados) =>{
+          this.dados = dados;}
+        } 
       )
   }
 

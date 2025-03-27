@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 export class DadoService {
   private apiUrl = "https://jsonplaceholder.typicode.com/posts"
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   getDados(): Observable<any>{
     return this.http.get<any>(this.apiUrl);
