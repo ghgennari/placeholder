@@ -11,9 +11,9 @@
 <table class="table">
     <thead>
       <tr *ngFor="let dado of dados">
-        <th scope="col">{{dado.id}}</th>
-        <th scope="col">{{dado.title}}</th>
-        <th scope="col">{{dado.body}}</th>
+        <td scope="row">{{dado.id}}</td>
+        <td scope="row">{{dado.title}}</td>
+        <td scope="row" class="limit-text">{{dado.body}}</td>
       </tr>
     </thead>
 </table>
